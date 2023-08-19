@@ -7,29 +7,27 @@ import {
   Stats,
 } from './Profile.styled';
 
-export const Profile = ({
-  user: { username, tag, location, avatar, stats },
-}) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <ProfileWrap>
-      <Description className="description">
+      <Description>
         <ProfileImage src={avatar} alt="User avatar" />
-        <UserName className="name">{username}</UserName>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+        <UserName>{username}</UserName>
+        <p>@{tag}</p>
+        <p>{location}</p>
       </Description>
-      <StatsWrap class="stats">
+      <StatsWrap>
         <Stats>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
+          <span>Followers</span>
+          <span>{stats.followers}</span>
         </Stats>
         <Stats>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
+          <span>Views</span>
+          <span>{stats.views}</span>
         </Stats>
         <Stats>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
+          <span>Likes</span>
+          <span>{stats.likes}</span>
         </Stats>
       </StatsWrap>
     </ProfileWrap>
