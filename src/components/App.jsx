@@ -1,7 +1,9 @@
-import { Profile } from 'components/Profile/Profile';
 import user from '../user.json';
-import { GlobalStyle } from './GlobalStyle';
+import data from '../data.json';
 import PropTypes from 'prop-types';
+import { Profile } from 'components/Profile/Profile';
+import { GlobalStyle } from './GlobalStyle';
+import { Statistics } from './Statistics/Statistics';
 
 export const App = () => {
   return (
@@ -13,6 +15,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Statistics title="Upload Stats" stats={data} />
       <GlobalStyle />
     </>
   );
@@ -29,4 +32,14 @@ Profile.propTypes = {
     views: PropTypes.number,
     likes: PropTypes.number,
   }),
+};
+
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };
