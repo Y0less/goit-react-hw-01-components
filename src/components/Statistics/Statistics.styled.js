@@ -16,8 +16,6 @@ export const Section = styled.section`
 export const List = styled.ul`
   display: flex;
   text-transform: none;
-  /* margin-right: auto;
-  margin-left: auto; */
   border: 1px solid gray;
 `;
 
