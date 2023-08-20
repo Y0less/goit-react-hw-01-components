@@ -7,7 +7,7 @@ export const Section = styled.section`
   margin-left: auto;
   text-align: center;
   width: 400px;
-  border: 2px solid gray;
+  border: ${props => props.theme.border};
   text-transform: uppercase;
   background-color: ${props => props.theme.colors.cardColor};
   box-shadow: ${props => props.theme.shadow};
@@ -30,4 +30,9 @@ export const ListItem = styled.li`
 
 export const StatItem = styled.span`
   margin: 5px;
+`;
+
+export const Percentage = styled.span`
+  margin: 5px;
+  font-weight: bold;
 `;

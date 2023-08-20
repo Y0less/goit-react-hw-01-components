@@ -58,5 +58,16 @@ FriendsList.propTypes = {
       isOnline: PropTypes.bool,
       id: PropTypes.number,
     })
-  )
-}
+  ),
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ),
+};

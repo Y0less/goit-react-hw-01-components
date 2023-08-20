@@ -1,22 +1,24 @@
+import { Table, TableData, TableHead } from './TransactionHistory.styled';
+
 export const TransactionHistory = props => {
-console.log('props :>> ', props);
-    return (
-<table className="transaction-history">
-    <thead>
+  return (
+    <Table className="transaction-history">
+      <thead>
         <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
+          <TableHead>Type</TableHead>
+          <TableHead>Amount</TableHead>
+          <TableHead>Currency</TableHead>
         </tr>
-    </thead>
-    <tbody>
-        {props.items.map(({id, type, amount, currency}) =>
-        <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-        </tr>)}      
-    </tbody>
-</table>
-)
-}
+      </thead>
+      <tbody>
+        {props.items.map(({ id, type, amount, currency }) => (
+          <tr key={id}>
+            <TableData>{type}</TableData>
+            <TableData>{amount}</TableData>
+            <TableData>{currency}</TableData>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
+  );
+};

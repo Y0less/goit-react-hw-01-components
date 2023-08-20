@@ -7,7 +7,7 @@ export const Container = styled.li`
   gap: 10px;
   padding: 10px;
   margin: 10px;
-  border: 1px solid gray;
+  border: ${props => props.theme.border};
   background-color: ${props => props.theme.colors.cardColor};
   box-shadow: ${props => props.theme.shadow};
 `;
@@ -17,4 +17,8 @@ export const Status = styled.span`
   height: 14px;
   border-radius: 50%;
   background-color: ${props => (props.$isonline ? 'green' : 'red')};
+`;
+
+export const Name = styled.p`
+  font-weight: bold;
 `;

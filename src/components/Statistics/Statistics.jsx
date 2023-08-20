@@ -1,16 +1,22 @@
-import { List, ListItem, Section, StatItem } from './Statistics.styled';
+import {
+  List,
+  ListItem,
+  Section,
+  StatItem,
+  Percentage,
+} from './Statistics.styled';
 import { getRandomHexColor } from 'Utils/randomColor';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <Section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
-      <List className="stat-list">
+    <Section>
+      {title && <h2>{title}</h2>}
+      <List>
         {stats.map(({ id, label, percentage }) => {
           return (
-            <ListItem key={id} className="item" color={getRandomHexColor()}>
-              <StatItem className="label">{label}</StatItem>
-              <StatItem className="percentage">{percentage}%</StatItem>
+            <ListItem key={id} color={getRandomHexColor()}>
+              <StatItem>{label}</StatItem>
+              <Percentage>{percentage}%</Percentage>
             </ListItem>
           );
         })}
