@@ -12,6 +12,8 @@ const theme = {
   radius: {
     borderRadius: '6px',
   },
+  shadow:
+    '-10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);',
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(

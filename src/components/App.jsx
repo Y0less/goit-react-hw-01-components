@@ -1,9 +1,11 @@
 import user from '../user.json';
 import data from '../data.json';
+import friends from '../friends.json';
 import PropTypes from 'prop-types';
-import { Profile } from 'components/Profile/Profile';
 import { GlobalStyle } from './GlobalStyle';
-import { Statistics } from './Statistics/Statistics';
+import { Profile } from 'components/Profile/Profile';
+import { Statistics } from 'components/Statistics/Statistics';
+import { FriendsList } from 'components/FriendList/FriendList';
 
 export const App = () => {
   return (
@@ -16,6 +18,7 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics title="Upload Stats" stats={data} />
+      <FriendsList friends={friends} />
       <GlobalStyle />
     </>
   );

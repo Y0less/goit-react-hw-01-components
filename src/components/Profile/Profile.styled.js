@@ -9,6 +9,7 @@ export const ProfileWrap = styled.div`
   border: 1px solid gray;
   border-radius: ${props => props.theme.radius.borderRadius};
   background-color: ${props => props.theme.colors.cardColor};
+  box-shadow: ${props => props.theme.shadow};
   :hover,
   :focus {
     background-color: ${props => props.theme.colors.hoverColor};

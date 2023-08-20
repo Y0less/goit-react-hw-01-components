@@ -2,14 +2,22 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   display: block;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-left: auto;
   text-align: center;
+  width: 400px;
+  border: 2px solid gray;
+  text-transform: uppercase;
+  background-color: ${props => props.theme.colors.cardColor};
+  box-shadow: ${props => props.theme.shadow};
 `;
 
 export const List = styled.ul`
   display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  width: 400px;
+  text-transform: none;
+  /* margin-right: auto;
+  margin-left: auto; */
   border: 1px solid gray;
 `;
 
