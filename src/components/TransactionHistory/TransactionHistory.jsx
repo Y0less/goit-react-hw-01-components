@@ -1,26 +1,27 @@
-export const TransactionHistory = () => {
+export const TransactionHistory = props => {
+console.log('props :>> ', props);
     return (
-        <table class="transaction-history">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+<table className="transaction-history">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
+        </tr>
+    </thead>
+    <tbody>
 
-  <tbody>
-    <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>Withdrawal</td>
-      <td>85</td>
-      <td>USD</td>
-    </tr>
-  </tbody>
+    {props.items.map((item) =>
+                    <tr>
+            <td>Invoice</td>
+            <td>125</td>
+            <td>USD</td>
+        </tr>)}      
+        
+   
+    </tbody>
 </table>
     )
 }
+
+// {props.items.map(() => )}
