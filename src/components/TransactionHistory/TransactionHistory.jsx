@@ -10,18 +10,13 @@ console.log('props :>> ', props);
         </tr>
     </thead>
     <tbody>
-
-    {props.items.map((item) =>
-                    <tr>
-            <td>Invoice</td>
-            <td>125</td>
-            <td>USD</td>
+        {props.items.map(({id, type, amount, currency}) =>
+        <tr key={id}>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
         </tr>)}      
-        
-   
     </tbody>
 </table>
-    )
+)
 }
-
-// {props.items.map(() => )}
